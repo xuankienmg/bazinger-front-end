@@ -1,0 +1,38 @@
+%active {
+  color: #fff;
+  background-color: transparent;
+  border-top: 3px solid #4bcaff;
+}
+
+.navbar-default {
+  background-color: #303030;
+  .navbar-nav {
+    .navbar-child {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 55px;
+        &:hover {
+          color: #4bcaff;
+        }
+    }
+    .active {
+      .navbar-child {
+        &:focus {
+          @extend %active
+        };
+        &:hover {
+          @extend %active
+        };
+        @extend %active
+      }
+    }
+  }
+}
+
+.navbar {
+  min-height: 90px;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
